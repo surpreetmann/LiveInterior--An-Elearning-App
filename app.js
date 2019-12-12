@@ -8,10 +8,12 @@ var exphbs =require('express-handlebars');
 var expressValidator =require('express-validator');
 var flash =require('connect-flash');
 var session =require('express-session');
+var passport =require('passport');
+var LocalStrategy =require('passport-local'),Strategy;
 var mongo =require('mongodb');
 var mongoose =require('mongoose');
-var passport =require('passport');
-var localStrategy =require('passport-local'),Strategy;
+mongoose.connect('mongodb://localhost/liveinterior');
+var db=mongoose.connection;
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
