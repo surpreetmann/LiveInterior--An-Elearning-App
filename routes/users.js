@@ -30,13 +30,13 @@ router.post('/register', function(req, res, next) {
   var type = req.body.type;
 
   //and then validate the form
-  req.checkBody('first_name', 'First Name field is required'.notEmpty());
-  req.checkBody('last_name', 'Last Name field is required'.notEmpty());
-  req.checkBody('email', 'Email field is required'.notEmpty());
-  req.checkBody('email', 'Your Email must be a valid Email address'.isEmail());
-  req.checkBody('username', 'Username field is required'.notEmpty());
-  req.checkBody('password', 'password field is required'.notEmpty());
-  req.checkBody('password2', 'Both passwords must match'.equals(req.body.password);
+  req.checkBody('first_name', 'First Name field is required').notEmpty();
+  req.checkBody('last_name', 'Last Name field is required').notEmpty();
+  req.checkBody('email', 'Email field is required').notEmpty();
+  req.checkBody('email', 'Your Email must be a valid Email address').isEmail();
+  req.checkBody('username', 'Username field is required').notEmpty();
+  req.checkBody('password', 'Password field is required').notEmpty();
+  req.checkBody('password2', 'Both passwords must match').equals(req.body.password);
 
   //for errors
   errors = req.validationErrors();
@@ -46,7 +46,7 @@ router.post('/register', function(req, res, next) {
     });
   }
   else{
-    
+
   }
 });
 
