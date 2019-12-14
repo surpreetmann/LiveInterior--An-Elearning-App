@@ -34,7 +34,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 // express session
 app.use(session({
-  secret: 'ElearnBySurpreet',
+  secret: 'LiveInteriorElearnBySurpreet',
   saveUninitialized: true,
   resave: true
 }));
